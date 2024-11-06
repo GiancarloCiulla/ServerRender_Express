@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Movie Search
+    link(rel="stylesheet", type="text/css", href="/css/style.css")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300", rel="stylesheet", type="text/css")
+
+  body
+    // Header
+    header
+      h1 Movie Search App
+      p Encuentra información sobre tus películas favoritas rápidamente.
+
+    // Main content container
+    .container
+      // Search form section
+      fieldset
+        legend Búsqueda de Películas
+        form(action="/film" method="post")
+          input(name="title" type="text" class="ghost-input" placeholder="Busca por título..." required)
+          input(type="submit" class="ghost-button" value="Buscar Películas")
+
+      // Suggestions or recent movies
+      .suggestions
+        h2 Películas populares
+        // Puedes agregar un contenedor con películas populares o destacadas
+        ul.popular-movies
+          li
+            h3 The Shawshank Redemption
+            p Año: 1994 | Director: Frank Darabont
+          li
+            h3 The Godfather
+            p Año: 1972 | Director: Francis Ford Coppola
+          li
+            h3 Inception
+            p Año: 2010 | Director: Christopher Nolan
+          li
+            h3 Parasite
+            p Año: 2019 | Director: Bong Joon-ho
+
+      // Description or additional info section
+      .description
+        h3 ¿Cómo funciona?
+        p Ingresa el título de una película en el campo de búsqueda para obtener detalles como el año de lanzamiento, el género, el director, y la sinopsis.
+        p La información de las películas es obtenida desde OMDB, una base de datos confiable.
+
+    // Footer
+    footer
+      p &copy; #{new Date().getFullYear()} Movie Search App. Todos los derechos reservados.

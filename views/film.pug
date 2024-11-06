@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/style.css")
+        title Film Details
+
+    body
+        main
+            section.movie-details
+                if title && year
+                    h1 Título: #{title}
+                    p Año: #{year}
+                    p Estreno: #{released}
+                    p Director: #{director}
+                    p Género: #{genre}
+                   
+                    
+                  
+                    
+                        img(src=src alt=title)
+                    
+               
+               
+
+        //footer
+            p &copy; #{new Date().getFullYear()} Movie Search App. Todos los derechos reservados.
